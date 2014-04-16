@@ -23,6 +23,9 @@ class DentooAccreditation
     sheets.each do |sheet|
       sheet[5,8] = "情報・通信工"
       sheet[5,15] = "ありたそ"
+      sheet[5,22] = "1104"
+      sheet[6,22] = "1211224"
+      sheet[10,2] = "長岡工業" + "高等専門学校"
     end
     save()
   end
