@@ -23,21 +23,21 @@ class DentooAccreditation
     sheets.each do |sheet|
       sheet[5,8] = "情報・通信工"
       sheet[5,15] = "ありたそ"
-      sheet[5,22] = "1104"
-      sheet[6,22] = "1211224"
+      sheet[5,22] = "0000"
+      sheet[6,22] = "123456"
       sheet[10,2] = "長岡工業" + "高等専門学校"
       sheet[9,13] = "電子制御工学科"
       sheet[8,18] = "      " + "21" + "年       " + "3月 入学"
       sheet[10,18] = "      " + "26" + "年       " + "4月 卒業・卒業見込・退学"
     end
+
     save()
   end
 
+  private
   def save
     @book.write('./NewNintei.xls')
   end
-
-
 end
 
 DentooAccreditation.new.edit
