@@ -26,6 +26,7 @@ class DentooAccreditation
       sheet[5,22] = "1104"
       sheet[6,22] = "1211224"
       sheet[10,2] = "長岡工業" + "高等専門学校"
+      sheet[9,13] = "電子制御工学科"
     end
     save()
   end
