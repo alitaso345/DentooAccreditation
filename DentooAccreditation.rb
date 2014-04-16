@@ -13,6 +13,17 @@ class DentooAccreditation
     SHEETNUM.times do |sheet_number|
       sheets[sheet_number] = @book.worksheet sheet_number
     end
+
+    sheets[0].each_with_index do |row,i|
+      row.each_with_index do |cell,j|
+        puts "#{cell},#{i},#{j}" if cell != nil
+      end
+    end
+
+    sheets.each do |sheet|
+      sheet[5,8] = "情報・通信工"
+    end
+    save()
   end
 
   def save
