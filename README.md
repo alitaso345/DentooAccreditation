@@ -3,7 +3,7 @@
 電通大編入生の単位認定書類作成を楽にするためのアプリケーション
 
 ```
-ruby DentooAccreditation.rb edit --course 入学する学科 --name 名前 --examinees 受験番号 --student_id 学籍番号 --graduated_school_name 出身高専 --graduated_school_course 高専時代の学科 --entrance_year 高専入学年度 --graduated_year 高専卒業年度
+ruby DentooAccreditation.rb edit --course 入学する学科 --name 名前 --examinees_number 受験番号 --student_id 学籍番号 --graduated_school_name 出身高専 --graduated_school_course 高専時代の学科 --entrance_year 高専入学年度 --graduated_year 高専卒業年度
 ```
 
 のように実行すると全てのシートにそれらの情報が記載されるため，ちまちま入力する必要がなくる．
