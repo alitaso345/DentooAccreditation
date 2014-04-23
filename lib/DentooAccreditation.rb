@@ -2,16 +2,18 @@ require 'spreadsheet'
 require 'thor'
 
 class DentooAccreditation < Thor
-  desc "DentooAccreditation","test"
   SHEETNUM = 16
-  option :course
-  option :name
-  option :examinees_number
-  option :student_id
-  option :graduated_school_name
-  option :graduated_school_course
-  option :entrance_year
-  option :graduated_year
+
+  def initialize(arguments)
+   @course = arguments[:curse]
+   @name = arguments[:name]
+   @examinees_number = arguments[:examinees_number]
+   @student_id = arguments[:student_id]
+   @graduated_school_name = arguments[:graduated_school_name]
+   @graduated_school_course = arguments[:graduated_school_course]
+   @entrance_year = arguments[:entrance_year]
+   @graduated_year = arguments[:graduated_year]
+  end
 
   def edit
     Spreadsheet.client_encoding = "UTF-8"
@@ -41,5 +43,3 @@ class DentooAccreditation < Thor
     @book.write('./NewNintei.xls')
   end
 end
-
-DentooAccreditation.start(ARGV)
