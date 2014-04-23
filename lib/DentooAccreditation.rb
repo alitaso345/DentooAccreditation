@@ -1,7 +1,6 @@
 require 'spreadsheet'
-require 'thor'
 
-class DentooAccreditation < Thor
+class DentooAccreditation
   SHEETNUM = 16
 
   def initialize(arguments)
@@ -18,7 +17,6 @@ class DentooAccreditation < Thor
   end
 
   def edit
-
 
     sheets = Array.new(SHEETNUM)
     SHEETNUM.times do |sheet_number|
