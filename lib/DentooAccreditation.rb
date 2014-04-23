@@ -10,10 +10,10 @@ class DentooAccreditation
     @name = arguments[:name]
     @examinees_number = arguments[:examinees_number]
     @student_id = arguments[:student_id]
-    @graduated_school_name = arguments[:graduated_school_name]
+    @graduated_school_name = arguments[:graduated_school_name].to_s
     @graduated_school_course = arguments[:graduated_school_course]
-    @entrance_year = arguments[:entrance_year]
-    @graduated_year = arguments[:graduated_year]
+    @entrance_year = arguments[:entrance_year].to_s
+    @graduated_year = arguments[:graduated_year].to_s
   end
 
   def edit
