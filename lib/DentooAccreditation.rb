@@ -6,7 +6,7 @@ class DentooAccreditation
   def initialize(arguments)
     Spreadsheet.client_encoding = "UTF-8"
     @book = Spreadsheet.open('./H24nintei.xls')
-    @course = arguments[:curse]
+    @course = arguments[:course]
     @name = arguments[:name]
     @examinees_number = arguments[:examinees_number]
     @student_id = arguments[:student_id]
