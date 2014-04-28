@@ -16,7 +16,7 @@ class DentooAccreditation
     @graduated_year = arguments[:graduated_year].to_s
   end
 
-  def edit
+  def save_as(xls_file_name)
 
     sheets = Array.new(SHEETNUM)
     SHEETNUM.times do |sheet_number|
@@ -34,11 +34,11 @@ class DentooAccreditation
       sheet[10,18] = "      " + @graduated_year + "年       " + "4月 卒業・卒業見込・退学"
     end
 
-    save()
+    save(xls_file_name)
   end
 
   private
-  def save
-    @book.write('./NewNintei.xls')
+  def save(file_name)
+    @book.write('./' + file_name)
   end
 end
